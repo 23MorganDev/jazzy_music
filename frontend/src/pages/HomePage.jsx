@@ -4,7 +4,7 @@ import TopCharts from "../components/TopCharts";
 import Category from "../components/Category";
 import Search from "../components/Search";
 import { Grid, GridItem, Hide } from "@chakra-ui/react";
-import Artists from "../components/Artist";
+import Artists from "../components/Artists";
 
 const HomePage = () => {
 	return (

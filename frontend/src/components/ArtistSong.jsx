@@ -14,8 +14,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { BsSoundwave } from "react-icons/bs";
 import LoginCard from "./LoginCard.jsx";
 import { frontend } from "../api/routeConfig.js";
-
-//rememeber to fix this imports
 import { setUser } from "../redux/slices/userSlice.js";
 import { setModalMessage } from "../redux/slices/modalSlice.js";
 
@@ -35,7 +33,7 @@ const ArtistSong = ({ song, handlePlay }) => {
 
 	const likeSong = async () => {
 		await frontend
-			.patch(`/songs/like/${song?._id}`, null, {
+			.patch(`/songs/like/${song?._id}`, null, {  //can be .patch("/songs/") because the backend route has the "/like/:id,verifyToken
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},
@@ -68,7 +66,7 @@ const ArtistSong = ({ song, handlePlay }) => {
 
 	return (
 		<>
-			<LoginModal ref={modalRef} onClose={onClose} isOpen={isOpen} />
+			<LoginCard ref={modalRef} onClose={onClose} isOpen={isOpen} />
 			<Flex
 				align="center"
 				justify="space-between"

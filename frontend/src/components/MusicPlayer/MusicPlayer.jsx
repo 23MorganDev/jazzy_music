@@ -18,7 +18,7 @@ import { frontend } from "../../api/routeConfig";
 import { setUser } from "../../redux/slices/userSlice";
 import VolumeControl from "./VolumeControl";
 import TrackDetails from "./TrackDetails";
-import PlayControl from "./PlayerControl";
+import PlayerControl from "./PlayerControl";
 import LoginCard from "../LoginCard";
 import PlayingBar from "./PlayingBar";
 import { setModalMessage } from "../../redux/slices/modalSlice";
@@ -219,7 +219,7 @@ const MusicPlayer = () => {
 				backdropFilter="blur(15px)">
 				<TrackDetails track={currentTrack} />
 				<Flex direction="column" gap={2}>
-					<PlayControls
+					<PlayerControl
 						isPlaying={isPlaying}
 						onNext={handleNextSong}
 						onPlay={handlePlayPause}

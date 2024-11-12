@@ -15,7 +15,7 @@ const PlaylistsPage = () => {
 		setLoading(true);
 		setError(false);
 		await frontend
-			.get("/playlists")
+			.get("/playlist")
 			.then((res) => {
 				setLoading(false);
 				setPlaylists(res.data);

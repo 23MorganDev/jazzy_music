@@ -42,7 +42,7 @@ const LoginCard = React.forwardRef((props, ref) => {
 					<Button
 						colorScheme="red"
 						ml={3}
-						onClick={() => navigate("/auth/login")}
+						onClick={() => navigate("/auth/login")}  //try "/login"
 						fontSize={{ base: "sm", md: "md" }}>
 						Login
 					</Button>

@@ -11,7 +11,7 @@ import {
 import { useDispatch } from "react-redux";
 import { toggleRepeat } from "../../redux/slices/playerSlice";
 
-const PlayControl = ({
+const PlayerControl = ({
 	onNext,
 	onPrevious,
 	onPlay,
@@ -90,4 +90,4 @@ const PlayControl = ({
 	);
 };
 
-export default PlayControl;
+export default PlayerControl;

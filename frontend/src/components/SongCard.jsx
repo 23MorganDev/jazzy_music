@@ -40,9 +40,9 @@ const SongCard = ({ song }) => {
 
   const handleLike = async () => {
     await frontend
-      .patch(`/songs/like/${song?._id}`, null, {
+      .patch(`/songs/like/${song?._id}`, null, {  //.patch(`/songs/${song?._id}`
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`, //http://localhost:5000/backend/songs/like/${song?._id}
         },
       })
       .then((res) => {

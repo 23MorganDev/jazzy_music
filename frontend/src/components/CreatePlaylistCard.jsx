@@ -25,7 +25,7 @@ const CreatePlaylistCard = () => {
 
 	return (
 		<>
-			<LoginModal ref={modalRef} onClose={onClose} isOpen={isOpen} />
+			<LoginCard ref={modalRef} onClose={onClose} isOpen={isOpen} />
 			<Flex
 				direction="column"
 				align="center"
