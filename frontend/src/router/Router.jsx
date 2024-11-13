@@ -12,7 +12,7 @@ import ArtistsPage from "../pages/ArtistsPage";
 import FavoritesPage from "../pages/FavoritesPage";
 import PlaylistPage from "../pages/PlaylistPage";
 import CreatePlaylistPage from "../pages/CreatePlaylistPage";
-import EditPlaylistPage from "../pages/EditPlaylistPage";
+import EditPlaylistPage from "../pages/EditPlayListPage";
 
 export const Router = createBrowserRouter([
 	{
