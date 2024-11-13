@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PlaylistCard from "../components/PlaylistCard";
+import PlayListCard from "../components/PlayListCard";
 import { Box, Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import CreatePlaylistCard from "../components/CreatePlaylistCard";
 import { frontend } from "../api/routeConfig";
