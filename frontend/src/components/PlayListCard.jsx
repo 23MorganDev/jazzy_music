@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {fadeInUp}  from "../theme/MotionVariant";
 
-const PlaylistCard = ({ playlist }) => {
+const PlayListCard = ({ playlist }) => {
 	return (
 		<Link to={`/playlists/${playlist?._id}`}>
 			<Box
@@ -47,4 +47,4 @@ const PlaylistCard = ({ playlist }) => {
 	);
 };
 
-export default PlaylistCard;
+export default PlayListCard;
