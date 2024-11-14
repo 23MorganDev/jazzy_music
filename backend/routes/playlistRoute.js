@@ -1,18 +1,18 @@
 import express from "express";
 import {
+  addNewPlaylist,
   getAllPlaylists,
-  getPlaylist,
-  createPlaylist,
-  editPlaylist,
+  getPlaylistById,
+  updatePlaylist,
+  deletePlaylist,
 } from "../controllers/playListController.js";
-
-import verifyToken from "../middleware/authToken.js";
 
 const router = express.Router();
 
+router.post("/add", addNewPlaylist);
 router.get("/", getAllPlaylists);
-router.get("/:id", getPlaylist);
-router.post("/create", verifyToken, createPlaylist);
-router.patch("/:id", verifyToken, editPlaylist);
+router.get("/:id", getPlaylistById);
+router.patch("/:id", updatePlaylist);
+router.delete("/:id", deletePlaylist);
 
 export { router as playlistRouter };

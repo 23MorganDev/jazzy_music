@@ -1,21 +1,20 @@
 import express from "express";
 import {
+  addSong,
   getAllSongs,
-  getTopSongs,
-  getNewSongReleases,
-  getRandomSongs,
-  getPopularSongs,
-  songLike,
+  getSongById,
+  updateSong,
+  likeSong,
+  deleteSong,
 } from "../controllers/songController.js";
 
-import verifyToken from "../middleware/authToken.js";
 const router = express.Router();
 
-router.get("/", getAllSongs);
-router.get("/top", getTopSongs);
-router.get("/releases", getNewSongReleases);
-router.get("/random", getRandomSongs);
-router.get("/popular", getPopularSongs);
-router.patch("/like/:id", verifyToken, songLike);
+router.post("/add", addSong);
+router.get("/all", getAllSongs);
+router.get("/:id", getSongById);
+router.get("/:id/update", updateSong);
+router.patch("/:id/like", likeSong);
+router.delete("/:id/delete", deleteSong);
 
 export { router as songsRouter };

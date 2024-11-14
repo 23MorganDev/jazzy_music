@@ -9,27 +9,20 @@ const PlaylistSchema = new mongoose.Schema(
     description: {
       type: String,
     },
-    userId: {
-      type: String,
-      required: true, 
-    },
-    userName: {
-      type: String,
-      required: true, 
-    },
     songs: {
-      type: [String], 
+      type: mongoose.Schema.Types.ObjectId, 
+      ref: "Song",
       required: true, 
     },
-    isPrivate: {
-      type: Boolean,
-      required: true, 
-      default: false,
+    owner: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
     },
     type: {
       type: String,
       required: true, 
-      default: "PlayList",
+      default: "Playlist",
     },
   },
   { timestamps: true }

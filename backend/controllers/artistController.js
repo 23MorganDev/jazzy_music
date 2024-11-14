@@ -1,6 +1,38 @@
 import Artist from "../models/Artist.js";
-import Song from "../models/Song.js";
 
+
+//add new artist 
+
+const addNewArtist = async (req, res) => {
+
+  const {name, image, type='Artist', bio}  = req.body
+
+ //field validation
+
+ if(!name){
+  return res.status(401).json({message: "Name is required!"})
+ }
+
+ try {
+  //check if the artist already exist
+
+  const existingArtist = Artist.findOne({name})
+
+  if(existingArtist){
+    return res.status(409).json({message: "Artist already exist"})
+  }
+
+  const newArtist = new Artist({name,image, type, bio})
+  await newArtist.save()
+
+  res.status(201).json({message: "Artist added successfully!", arstist: newArtist})
+
+
+ } catch (error) {
+  res.status(500).json({message: "An internal error ocurred when trying to creating artist!", error: error.message})
+ }
+
+}
 // Get all artists
 const getAllArtists = async (req, res) => {
   try {
@@ -46,4 +78,4 @@ const getArtistDetails = async (req, res) => {
 };
 
 
-export { getAllArtists, getTopArtists, getArtistDetails };
+export { addNewArtist,getAllArtists, getTopArtists, getArtistDetails };
