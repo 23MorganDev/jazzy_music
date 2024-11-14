@@ -132,7 +132,7 @@ const EditPlaylistPage = () => {
 			songIds,
 		};
 		await frontend
-			.patch(`/playlists/${id}`, playlistDetails, {
+			.patch(`/playlist/${id}`, playlistDetails, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 					"Content-Type": "application/json",

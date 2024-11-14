@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ArtistCard = ({ artiste }) => {
 	return (
-		<Link to={`/artiste/${artiste?._id}`}>
+		<Link to={`/artists/${artist?._id}`}>
 			<Flex
 				direction="column"
 				align="center"
@@ -18,8 +18,8 @@ const ArtistCard = ({ artiste }) => {
 					w={{ base: "4.5rem", md: "6.5rem" }}
 					rounded="full">
 					<Image
-						src={artiste?.image}
-						alt={artiste?.name}
+						src={artist?.image}
+						alt={artist?.name}
 						objectFit="cover"
 						rounded="full"
 						w={{ base: "4rem", md: "6rem" }}
@@ -32,7 +32,7 @@ const ArtistCard = ({ artiste }) => {
 					fontWeight={500}
 					textAlign="center"
 					mt={4}>
-					{artiste?.name}
+					{artist?.name}
 				</Text>
 			</Flex>
 		</Link>

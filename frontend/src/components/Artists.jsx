@@ -14,7 +14,7 @@ const Artists = () => {
 		setLoading(true);
 		setError(false);
 		await frontend
-			.get("/artists/top")  //.get("/artists/") thisis bcoz the backend route already has the "/top"
+			.get("/artists/top")  
 			.then((res) => {
 				setArtists(res.data);
 				setLoading(false);

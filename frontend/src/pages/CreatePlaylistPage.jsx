@@ -88,7 +88,7 @@ const CreatePlaylistPage = () => {
 		};
 		setCreatePlLoading(true);
 		await frontend
-			.post("/playlists/create", playlistDetails, {
+			.post("/playlist/add", playlistDetails, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 					"Content-Type": "application/json",

@@ -16,7 +16,7 @@ const CreatePlaylistCard = () => {
 
 	const handleCreatePlaylist = () => {
 		if (user) {
-			navigate("/playlists/create");
+			navigate("/playlist/add");
 		} else {
 			dispatch(setModalMessage("Please login to create a playlist."));
 			onOpen();

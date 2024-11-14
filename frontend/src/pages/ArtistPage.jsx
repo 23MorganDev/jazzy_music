@@ -29,7 +29,7 @@ const ArtistPage = () => {
 		setLoading(true);
 		setError(false);
 		await frontend
-			.get(`/artists/${id}`)
+			.get(`/artists/${artist?._id}`)
 			.then((res) => {
 				setArtist(res.data);
 				setLoading(false);

@@ -33,7 +33,7 @@ const ArtistSong = ({ song, handlePlay }) => {
 
 	const likeSong = async () => {
 		await frontend
-			.patch(`/songs/like/${song?._id}`, null, {  //can be .patch("/songs/") because the backend route has the "/like/:id,verifyToken
+			.patch(`/songs/like/${song?._id}`, null, {  
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},

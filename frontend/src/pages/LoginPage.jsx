@@ -68,7 +68,7 @@ const LoginPage = () => {
 					<Heading fontSize="2xl" color="zinc.200">
 						Login
 					</Heading>
-					<Text fontSize="sm">To continue enjoying BeatBox</Text>
+					<Text fontSize="sm">To continue enjoying Jazzy Vibes</Text>
 				</Box>
 				<Flex direction="column" gap={4}>
 					<FormControl>
